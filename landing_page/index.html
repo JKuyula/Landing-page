@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lpstyle.css">
+    <title>Document</title>
+</head>
+<body>
+     <div class="banner">
+                <p><strong>Free delivery on all orders over R500</strong></p>
+    </div>
+        
+     <nav>
+        <div class="logo">Joe's Fashion</div>
+        <span class="menubtn" onclick="openNav()">&#9776;</span>
+        <div class="navlinks">
+            <!--Menu items-->
+            <ul>
+                <li><a href="#"></a>New</li>
+                <li><a href="#"></a>Ladies</li>
+                <li><a href="#"></a>Men</li>
+                <li><a href="#"></a>Brands</li>
+                <li><a href="#"></a>Promotion</li>
+                <li><a href="#"></a>Login</li>
+                <div>
+                    <li class="search-icon">
+                        <input type="search" placeholder="Search...">
+                        <button class ="search-btn">&#x1F50E;&#xFE0E;</button>
+                        <button class ="cart-btn">&#128722;</button>
+                    </li>    
+               </div>
+              
+            </ul> 
+        </div>
+        
+     </nav> 
+        <div>
+            
+        </div>
+    <!--Responsive navigation bar-->   
+        <div class="sideNav" id="sidenav">
+            <a href="#" class="closeBtn" onclick="closeNav()">&#10006;</a>
+            <a href="#">New</a>
+            <a href="#">Ladies</a>
+            <a href="#">Men</a>
+            <a href="#">Brands</a>
+            <a href="#">Promotion</a>
+            <a href="#">Login</a>
+            <div class="search">
+                <input type="text" class="search-box" placeholder="Search...">
+                <button class="search-btn">search</button>
+            </div>
+        </div>
+
+     <!--Header content with black friday banner image-->
+        <div class="row">
+          <div class="column1">
+            <h1>THIS WEEK</h1>
+            <p><h2>LIMITED TIME</h2></p>
+            <p><h2>UP TO 50% ON EVERYTHING</h2></p>
+            <p><h2>FROM NOVEMBER 24 TO 30</h2></p>
+            <button>SHOP NOW</button>
+          </div>
+          <div class="column2">
+            <img src="images/banner.jpg" alt="black-friday banner" width="950" height="400">
+          </div>
+        </di>
+     </div>
+
+     <!--Javascript code to make side menu appear-->
+     <script>
+        function openNav(){
+            document.getElementById("sidenav").style.width="50%";
+        }
+        function closeNav(){
+            document.getElementById("sidenav").style.width="0%";
+        }
+     </script>
+      <div class="container">
+        <p><h1>Hurry up! Sale end in</h1></p>
+      </div>
+      <div class="container">
+        <p id="countdown"></p>
+     </div>
+
+     <script>
+        // Set the date we are counting down to
+        var countDownDate = new Date("September 1, 2024 12:00:00").getTime();
+        
+        // Count down updated every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Calculate the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // the output result that will appear on the screen
+          document.getElementById("countdown").innerHTML = days + " Days " + hours + " Hrs "
+          + minutes + " Min " + seconds + " Sec ";
+            
+          // When the countdown is over, display a text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+    </script>
+
+    <div class="section">
+        <p><h1>NEW IN</h1></p>
+    </div>
+    <!--Highlight new items-->
+    <table style="width:100%">
+    <tr>
+        <div class="row 1">
+            <div class="column 1"> 
+                <img src="images/blue_bag.jpg" width="500" height="300">
+                <p>Back Pack Blue & Orange</p>
+                <p>R1200</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            <div class="column 2">
+                <img src="images/orange_bag (2).jpg" width="500" height="300">
+                <p>Small bag</p>
+                <p>R450</p>
+                <a href="#" class="button">Add to Cart</a>
+
+            </div>
+            <div class ="column 3">
+                <img src="images/kaki_bag.jpg" width="500" height="300"> 
+                <p>Back Pack Kaki & Charcoal<br/>R850</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>  
+            
+        </div>
+        <div class="row 2">
+            <div class="column 1"> 
+                <img src="images/blue_sneakers.jpg" width="500" height="300">
+                <p>Ladies Sneakers</p>
+                <p>R1400</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            <div class="column 2">
+                <img src= "images/multicolor.jpg" width="500" height="300">
+                <p>Men Sneakers</p>
+                <p>R350</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            <div class ="column 3">
+                <img src= "images/white_sneakers.jpg" width="500" height="300">  
+                <p>Men 3-pack socks</p>
+                <p>R170</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            
+        </div>
+        <div class="row 3">
+            <div class="column 1"> 
+                <img src="images/white_sandal.jpg" width="500" height="300">
+                <p>Men Lace Formal Shoe</p>
+                <p>R1400</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            <div class="column 2">
+                <img src= "images/slippers.jpg" width="500" height="300">
+                <p>Ladies Red Shoes</p>
+                <p>R350</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            <div class ="column 3">
+                <img src= "images/green_sandal.jpg" width="500" height="300">  
+                <p>Men 3-pack socks</p>
+                <p>R170</p>
+                <a href="#" class="button">Add to Cart</a>
+            </div>
+            
+        </div>
+    </tr>
+    </table>
+    <!--Footer-->
+    <footer class=" footer">
+        <div class="text-center p-3" style="background-color:#aa0404;">
+          <center><p>Designed by Joelle Kuyula</p></center>
+        </div>
+    </footer>
+      
+</body>
+</html>
